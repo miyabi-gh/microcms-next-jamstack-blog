@@ -1,4 +1,4 @@
-import { client } from "@pages/api/microcms";
+import { client } from "../../libs/client";
 
 export default async (req, res) => {
   if (!req.query.slug) {
