@@ -1,0 +1,58 @@
+.header{
+  position: relative;
+}
+.hamburger{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Aserif%3D%22http%3A%2F%2Fwww.serif.com%2F%22%20height%3D%22100%25%22%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A2%3B%22%20version%3D%221.1%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%22100%25%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%20id%3D%22Icon%22%3E%3Cpath%20d%3D%22M4%2C6.75l16%2C0c0.414%2C0%200.75%2C-0.336%200.75%2C-0.75c0%2C-0.414%20-0.336%2C-0.75%20-0.75%2C-0.75l-16%2C0c-0.414%2C0%20-0.75%2C0.336%20-0.75%2C0.75c0%2C0.414%200.336%2C0.75%200.75%2C0.75Z%22%2F%3E%3Cpath%20d%3D%22M4%2C12.75l16%2C0c0.414%2C0%200.75%2C-0.336%200.75%2C-0.75c0%2C-0.414%20-0.336%2C-0.75%20-0.75%2C-0.75l-16%2C0c-0.414%2C0%20-0.75%2C0.336%20-0.75%2C0.75c0%2C0.414%200.336%2C0.75%200.75%2C0.75Z%22%2F%3E%3Cpath%20d%3D%22M4%2C18.75l16%2C0c0.414%2C0%200.75%2C-0.336%200.75%2C-0.75c0%2C-0.414%20-0.336%2C-0.75%20-0.75%2C-0.75l-16%2C0c-0.414%2C0%20-0.75%2C0.336%20-0.75%2C0.75c0%2C0.414%200.336%2C0.75%200.75%2C0.75Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') 50% 50% / contain no-repeat;
+  cursor: pointer;
+  z-index: 2;
+  &.open{
+    background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20fill%3D%22none%22%20viewBox%3D%220%200%2014%2014%22%3E%20%3Cpath%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20d%3D%22m.812%201.873%2011.314%2011.314a.75.75%200%200%200%201.06-1.06L1.874.812a.75.75%200%200%200-1.06%201.06Z%22%20clip-rule%3D%22evenodd%22%2F%3E%20%3Cpath%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M1.873%2013.188%2013.187%201.874a.75.75%200%200%200-1.06-1.06L.812%2012.127a.75.75%200%200%200%201.06%201.061Z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') 50% 50% / 35px no-repeat;
+  }
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(36, 45, 51, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  &.open{
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.nav{
+  width: 300px;
+  height: 100%;
+  padding: 160px 40px 120px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform .3s;
+  &.open{
+    transform: translateX(0%);
+  }
+}
+.navItem{
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #03181A;
+  line-height: 1.9;
+  letter-spacing: .08em;
+  a{
+    padding-left: 30px;
+    display: block;
+    background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cdefs%3E%3Cstyle%3E.a%2C.b%7Bfill%3Anone%3B%7D.b%7Bstroke%3A%233EA8FF%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-width%3A4px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3E121_arr_24%3C%2Ftitle%3E%3Crect%20class%3D%22a%22%20width%3D%2248%22%20height%3D%2248%22%2F%3E%3Cpolyline%20class%3D%22b%22%20points%3D%2221%2018%2027%2024%2021%2030%22%2F%3E%3C%2Fsvg%3E') -10px 1px / auto no-repeat;
+  }
+}

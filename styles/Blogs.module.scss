@@ -1,6 +1,12 @@
+.wrapper{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .main{
   max-width: 720px;
   margin: 0 auto;
+  padding: 0 40px;
+  padding-bottom: 120px;
   display: block;
 }
 
@@ -8,14 +14,21 @@
   margin-top: 65 + 48px;
 }
 
+.blogsItem{
+  & + .blogsItem{
+    margin-top: 80px;
+  }
+}
+
 .blogsThumbnail{
+  border: 1px solid #5c93bb2b;
   img{
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
   & + .blogsTitle{
-    margin-top: 40px;
+    margin-top: 35px;
   }
 }
 
@@ -30,35 +43,37 @@
 }
 
 .blogsHeader{
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   border-bottom: 1px solid #5c93bb2b;
 }
 
 .blogsDate{
+  margin-left: 20px;
   font-weight: 700;
   font-size: 2rem;
   color: #6e7b85;
   line-height: 1.5;
+  letter-spacing: .06em;
   display: inline-block;
   vertical-align: middle;
   & + .blogsTitle{
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 
 .blogsCategory{
-  margin-left: 20px;
-  padding: 10px 10px;
-  font-weight: 700;
+  padding: 7px 10px;
+  font-weight: 600;
   font-size: 1.4rem;
   color: #fff;
   line-height: 1;
-  background: #238f76;
+  letter-spacing: .06em;
+  background: #3ea8ff;
   display: inline-block;
   vertical-align: middle;
   border-radius: 6px;
   & + .blogsTitle{
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 
@@ -71,11 +86,39 @@
     margin-bottom: 18px;
     object-fit: contain;
   }
+  h1{
+    // margin-top: -18px;
+    margin-bottom: -18px;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1.5;
+  }
   h2{
     // margin-top: -18px;
     margin-bottom: -18px;
     font-weight: 700;
     font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  h3{
+    // margin-top: -18px;
+    margin-bottom: -18px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.5;
+  }
+  h4{
+    // margin-top: -18px;
+    margin-bottom: -18px;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 1.5;
+  }
+  h5{
+    // margin-top: -18px;
+    margin-bottom: -18px;
+    font-weight: 700;
+    font-size: 1.8rem;
     line-height: 1.5;
   }
   p{
@@ -94,4 +137,38 @@
       letter-spacing: .08em;
     }
   }
+  blockquote{
+    font-size: 1.6rem;
+    color: #03181A;
+    line-height: 1.9;
+    letter-spacing: .08em;
+    border-left: 4px solid #ccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 16px;
+  }
+  pre{
+    font-size: 1.6rem;
+    color: #03181A;
+    line-height: 1.9;
+    letter-spacing: .08em;
+    background-color: #23241f;
+    color: #f8f8f2;
+    overflow: visible;
+    white-space: pre-wrap;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+  }
+}
+
+.isPreview{
+  padding: 40px 0;
+  background: #f1f5f9;
+  font-size: 1.4rem;
+  color: #6e7b85;
+  text-align: center;
+}
+.isPreviewOff{
+  text-decoration: underline;
 }
